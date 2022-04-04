@@ -16,6 +16,7 @@
 
 package com.example.android.guesstheword.screens.game
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 
@@ -26,10 +27,10 @@ class GameViewModel : ViewModel() {
 
     // TODO (01) Wrap word and score in MutableLiveData
     // The current word
-    var word = ""
+    val word = MutableLiveData<String>()
 
     // The current score
-    var score = 0
+    val score = MutableLiveData<Int>()
     // TODO (02) Change references to score and word to score.value and word.value and add the
     // require null safety checks
 
